@@ -1,0 +1,292 @@
+* {
+
+    --color-primary: #6B8E23;
+    /* Verde-musgo */
+    --color-secondary: #F5F5DC;
+    /* Bege */
+    --color-botao: #4caf50;
+    --color-fundo2: #f3e7d5
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --color-fundo2: #f3e7d5;
+}
+
+body {
+    background-color: var(--color-fundo2);
+}
+
+
+
+header .volta-btn {
+    position: absolute;
+    margin: 25px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    left: 0%;
+    border: none;
+    margin-top: 0;
+}
+
+.information {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    margin-top: 50vh;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 85px 0;
+    height: 80Vh;
+    box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    & .caixa-nome {
+        position: absolute;
+        gap: 20px;
+        margin: 40px;
+        background-color: white;
+        box-shadow: 0 0px 12px 6px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        border-radius: 10px;
+        left: 70%;
+        top: 18%;
+        transform: translateX(-50%);
+
+        &:hover {
+            box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+
+
+    }
+
+    & .caixa-end {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 40px;
+        background-color: white;
+        box-shadow: 0 0px 12px 6px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        border-radius: 10px;
+        left: 20%;
+        top: 18%;
+        transform: translateX(-50%);
+
+        &:hover {
+            box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+
+    }
+
+    & h3 {
+        position: absolute;
+        background-color: #4caf50;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+
+}
+
+
+
+.information input {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.information label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.caixa-cmc {
+    position: absolute;
+    background-color: var(--color-botao);
+    height: 170px;
+    top: 19%;
+    left: 0%;
+    width: 100%;
+
+    & h2 {
+        position: relative;
+        text-align: center;
+        top: 40%;
+
+    }
+
+    & svg {
+        position: absolute;
+        background-color: white;
+        fill: var(--color-botao);
+        border-radius: 50px;
+        left: 60%;
+    }
+}
+
+.finalizar-btn {
+    position: absolute;
+    top: 110%;
+    left: 55%;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: var(--color-botao);
+    color: white;
+
+
+    &:hover {
+        background-color: rgb(31, 30, 30);
+        color: var(--color-botao);
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+
+    body {
+        margin: 0;
+    }
+
+
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        z-index: 5;
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .menu #pesquisar {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        margin-left: -60px;
+        position: relative;
+        left: 10%;
+    }
+
+    .menu #pesquisar img {
+        width: 20px;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .menu a {
+        position: absolute;
+        left: 70%;
+        top: -5px;
+
+        & img {
+            width: 40px;
+            height: 40px;
+        }
+
+        & span {
+            display: flex;
+            margin-left: -8px;
+        }
+    }
+
+    .menu input {
+        display: flex;
+        max-width: 30%;
+        height: 30px;
+        margin-left: -190px;
+
+        &::placeholder {
+            font-size: 10px;
+        }
+    }
+
+
+    .information {
+        position: relative;
+        height: 120vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+        margin-bottom: 20vh;
+
+
+    }
+
+    .information .caixa-nome {
+        position: absolute;
+        left: 20px;
+        top: 70px;
+        
+        width: 30vh;
+        left: 50%;
+        transform: translateX(-65%);
+    }
+
+
+
+    .information .caixa-nome label {
+        margin-left: -30px;
+        width: 140%;
+    }
+
+    .information .caixa-end {
+        position: absolute;
+        display: flex;
+        top: 45%;
+        width: 30vh;
+        left: 50%;
+        transform: translateX(-65%);
+
+    }
+
+    .information .caixa-end label {
+        margin-left: -30px;
+        width: 140%;
+    }
+
+    .finalizar-btn {
+        position: absolute;
+        top: 195%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+
+    .menu .volta-btn {
+        position: absolute;
+        margin-left: -30px;
+    }
+
+
+}

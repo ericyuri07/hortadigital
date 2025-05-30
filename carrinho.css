@@ -1,0 +1,432 @@
+* {
+
+  --color-primary: #6B8E23;
+  /* Verde-musgo */
+  --color-secondary: #F5F5DC;
+  /* Bege */
+  --color-botao: #4caf50;
+  --color-fundo2: #f3e7d5
+}
+
+
+body {
+  background-color: #f3e7d5;
+
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.item-carrinho {
+  margin: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px;
+  border: 1px solid var(--color-botao);
+  padding: 50px;
+  width: 150vh;
+}
+
+.item-carrinho img {
+  margin: 0 180px;
+  width: 120px;
+  height: 120px;
+  margin-right: 95px;
+  border: 1px solid, var(--color-botao);
+  margin-left: 10px;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.remover-btn {
+
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-top: -90px;
+
+  & svg {
+    width: 5vh;
+    height: 5vh;
+
+  }
+
+  & :hover {
+    opacity: 0.8;
+
+  }
+}
+
+.finalizar-btn {
+  margin-top: 30px;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  left: 62%;
+
+
+  &:hover {
+    background-color: rgb(3, 73, 3);
+  }
+
+}
+
+.cabecalho {
+  display: flex;
+  margin-top: 130px;
+  background-color: var(--color-botao);
+  justify-content: center;
+
+  & h1 {
+    color: white;
+    padding: 80px 80px;
+    font-weight: normal;
+
+  }
+
+  & svg {
+    width: 90px;
+    height: 90px;
+    margin-top: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    fill: var(--color-botao);
+
+    &:hover {
+      fill: white;
+      background-color: green;
+    }
+  }
+}
+
+input {
+  border-radius: 90px;
+  width: 70px;
+  text-align: center;
+  height: 40px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+.preco-item {
+  position: absolute;
+  left: 80%;
+  margin-top: 90px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.linha-totais {
+  position: relative;
+  left: 64.5%;
+}
+
+.totais-carrinho {
+
+
+  & .linha-total {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--color-botao);
+    gap: 180px;
+    margin-top: 40px;
+    width: 50vh;
+    left: 65%;
+
+    & .linha-sub {
+      margin-top: 10px;
+      font-size: 20px;
+
+    }
+
+    & .linha-subtotal {
+      margin-bottom: 10px;
+      font-size: 25px;
+      margin-left: 8px;
+
+    }
+
+    & .linha-desconto {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    & .linha-descontos {
+      margin-bottom: 10px;
+      font-size: 25px;
+
+    }
+
+    & .linha-final {
+      margin-top: 10px;
+      font-size: 20px;
+
+    }
+
+    & .linha-total-final {
+      margin-bottom: 10px;
+      font-size: 25px;
+      margin-left: 35px;
+    }
+
+
+  }
+
+
+
+
+}
+
+.caixa-btn {
+  position: relative;
+  display: flex;
+
+  & .continuar-btn {
+    position: absolute;
+    margin-top: 30px;
+    left: 73.5%;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(3, 73, 3);
+    }
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .item-carrinho {
+    margin: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 90vw;
+    /* largura responsiva */
+  }
+
+  .item-carrinho img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0 10px 0;
+    border: 1px solid var(--color-botao);
+    /* corrigido para não usar vírgula */
+  }
+
+  .item-info {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 25vh;
+  }
+
+  .preco-item {
+    position: static;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: -22px;
+    color: var(--color-botao);
+  }
+
+  input {
+    width: 60px;
+    height: 35px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .remover-btn {
+    position: absolute;
+    margin-top: 1px;
+    align-self: flex-end;
+
+  }
+
+
+  .cabecalho {
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .cabecalho h1 {
+    padding: 20px 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .cabecalho svg {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+  }
+
+  .linha-totais {
+    left: auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .totais-carrinho .linha-total {
+    width: 90%;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 15px;
+    left: auto;
+    margin: auto;
+
+
+
+  }
+
+
+
+
+  .caixa-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px auto;
+    margin-left: -19%;
+    width: 100%;
+    max-width: 100%;
+
+  }
+
+  .finalizar-btn {
+    display: flex;
+    position: relative;
+    left: -4%;
+    padding: 24px 10px;
+
+  }
+
+  .continuar-btn {
+    position: static;
+    padding: 10px 20px;
+    font-size: 16px;
+    flex: 1 1 auto;
+    max-width: 90%;
+    width: 150px;
+    left: 20%;
+  }
+
+
+  p {
+    font-size: 20px;
+
+  }
+
+
+
+  .produto {
+    position: absolute;
+    left: 24vh;
+    margin-top: -9vh;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  .subtotal {
+    position: absolute;
+    margin-top: -1vh;
+    font-size: 18px;
+
+  }
+
+  .preco-item {
+    position: absolute;
+    width: 140px;
+    left: 10px;
+    margin-top: 2vh;
+    font-size: 23px;
+  }
+
+  .total {
+    position: absolute;
+    left: 33vh;
+    margin-top: 6vh;
+
+  }
+
+  strong {
+    position: absolute;
+    left: 22vh;
+    margin-top: -12vh;
+
+  }
+
+
+
+  .quantidade {
+    font-weight: normal;
+    font-size: 10px;
+    margin-top: 7px;
+    margin-left: 7px;
+  }
+
+  .linha-total-final {
+    position: absolute;
+    top: 10%;
+    left: 47%;
+    width: 100%;
+  }
+
+  .linha-descontos {
+    position: absolute;
+    top: 10%;
+    left: 57%;
+    width: 100%;
+  }
+
+  .linha-subtotal {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 100%;
+
+  }
+
+
+
+
+
+}
